@@ -1,5 +1,5 @@
 def call() { 
-  def props = libraryResource("Parameters.json")
+  def props = libraryResource("foo/Parameters.json")
   last_started = env.STAGE_NAME
                 sh """
                 . ${PYTHON_FW_ENV}
