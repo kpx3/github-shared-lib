@@ -1,5 +1,6 @@
 def call() { 
-last_started = env.STAGE_NAME
+  def props = readJSON file: 'resources/foo/Parameters.json'
+  last_started = env.STAGE_NAME
                 sh """
                 . ${PYTHON_FW_ENV}
                 cd \$OOW_HOME/main/otmociwf
