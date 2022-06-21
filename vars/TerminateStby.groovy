@@ -1,5 +1,5 @@
 def call() { 
-  def props = readJSON file: 'resources/foo/Parameters.json'
+ /* def props = readJSON file: 'resources/foo/Parameters.json'
  /* last_started = env.STAGE_NAME
                 sh """
                 . ${PYTHON_FW_ENV}
