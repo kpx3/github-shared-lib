@@ -1,2 +1,2 @@
 # github-shared-lib
-Shared piprline library
+Shared pipeline library
