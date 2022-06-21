@@ -1,8 +1,8 @@
-import groovy.json.JsonSlurper
+import groovy.json.JsonSlurperClassic
 def call() { 
   def props = libraryResource("foo/Parameters.json")
-  assert props instanceof Map
-  sh "echo ${props}"
+  def data = new JsonSlurperClassic().parseText(props)
+  sh "echo ${data}"
   last_started = env.STAGE_NAME
                 sh """
                 . ${cfg[PYTHON_FW_ENV]}
