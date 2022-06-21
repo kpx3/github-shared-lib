@@ -1,8 +1,9 @@
 import groovy.json.JsonSlurper
 def call() { 
   def props = libraryResource("foo/Parameters.json")
-  sh "echo ${props}"
+  
   cfg = JsonSlurper.parseText(props)
+  sh "echo ${cfg}"
   last_started = env.STAGE_NAME
                 sh """
                 . ${cfg.PYTHON_FW_ENV}
