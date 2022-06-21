@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurper
 def call() { 
   def props = libraryResource("foo/Parameters.json")
-  cfg = new groovy.jsonJsonSlurper.parse(new File('./Parameters.json'))
+  cfg = new groovy.json.JsonSlurper.parse(new File('./Parameters.json'))
   assert cfg instanceof Map
   sh "echo ${cfg}"
   last_started = env.STAGE_NAME
