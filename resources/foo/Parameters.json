@@ -1,3 +1,3 @@
-'''{ 
+{ 
    "PYTHON_FW_ENV": "/home/oracle/python_fw_master/oow.env","serviceNameSuffix": "22B-DR","environmentName" : "pool2sm01p1z2dev.OTMGTM-22B-DR","def db_name" : "dphx2adc","def otmRelease" : "22b"
-}'''
+}
