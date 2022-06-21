@@ -1,8 +1,8 @@
 import groovy.json.JsonSlurper
 def call() { 
   def props = libraryResource("foo/Parameters.json")
-  
-  cfg = JsonSlurper.parseText(props)
+  def jsonSlurper = new JsonSlurper()
+  cfg = jsonSlurper.parseText(props)
   sh "echo ${cfg}"
   last_started = env.STAGE_NAME
                 sh """
