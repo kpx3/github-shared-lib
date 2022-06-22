@@ -6,8 +6,5 @@ def call() {
   last_started = env.STAGE_NAME
                 sh """
                 . ${data.PYTHON_FW_ENV}
-                cd \$OOW_HOME/main/otmociwf
-                echo '${params.data.EnvironmentName}'
-                python invoke_workflow.py --workflow=terminate_dr_workflow --release=${params.data.OTM_RELEASE} --environment_name=${params.data.EnvironmentName}
-                """ 
+              
 }
