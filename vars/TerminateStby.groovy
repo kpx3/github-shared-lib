@@ -6,5 +6,6 @@ def call() {
   last_started = env.STAGE_NAME
                 sh """
                 . ${data.PYTHON_FW_ENV}
+                """
               
 }
