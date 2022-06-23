@@ -7,7 +7,7 @@ def call() {
                 echo 'Switchover Started'
                 echo "Hello ${params.EnvironmentName}"
                 sh """
-                . ${PYTHON_FW_ENV}
+                python ${PYTHON_FW_ENV}
                
                 """
 }
