@@ -1,5 +1,5 @@
 { 
-   "PYTHON_FW_ENV": "/Users/kautilyapandey/Documents/Python_fw_env",
+   "PYTHON_FW_ENV": "/Users/kautilyapandey/Documents/python_env.py",
    "serviceNameSuffix": "22B-DR",
    "EnvironmentName" : "py-22B-DR",
    "def db_name" : "adc",
