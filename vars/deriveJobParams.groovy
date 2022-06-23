@@ -3,6 +3,7 @@ def call(Map config = [:]) {
   def props = libraryResource("foo/Parameters.json")
   def data = new JsonSlurperClassic().parseText(props)
   def JOB_NAME = config.job
+  sh "echo JOB_NAME" 
     properties([
         parameters([
             booleanParam(defaultValue: false, name: 'BuildAll', description: ''),
