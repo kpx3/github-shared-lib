@@ -6,15 +6,15 @@ def call(Map config = [:]) {
     properties([
         parameters([
             booleanParam(defaultValue: false, name: 'BuildAll', description: ''),
-            stringParam(name: 'SuffixName', defaultValue: serviceNameSuffix, description: 'Give the suffix name'),
+            stringParam(name: 'SuffixName', defaultValue: data.serviceNameSuffix, description: 'Give the suffix name'),
         
-        stringParam(name: 'EnvironmentName', defaultValue: environmentName, description: 'Give the environment name'),
+        stringParam(name: 'EnvironmentName', defaultValue: data.environmentName, description: 'Give the environment name'),
 
         choiceParam(name: 'SkipDBReset', choices: ['False', 'True'], description: 'Skips DB reset'),
         
-        stringParam(name: 'DB_NAME', defaultValue: db_name, description: 'db name'),
+        stringParam(name: 'DB_NAME', defaultValue: data.db_name, description: 'db name'),
         
-        stringParam(name: 'OTM_RELEASE', defaultValue: otmRelease, description: 'new otm release'),
+        stringParam(name: 'OTM_RELEASE', defaultValue: data.otmRelease, description: 'new otm release'),
         
         stringParam(name: 'OTM_VERSION', defaultValue: 'latest', description: 'new latest / image name like otm20c-time-stamp'),
         
