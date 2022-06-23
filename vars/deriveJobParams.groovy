@@ -3,10 +3,11 @@ def call(Map config = [:]) {
   def props = libraryResource("foo/Parameters.json")
   def data = new JsonSlurperClassic().parseText(props)
   def JOB_NAME = config.job
-  
-  def engine = new groovy.text.GStringTemplateEngine()
 
-  def serviceNameSuffix = engine.createTemplate(data.serviceNameSuffix).make(binding)
+  def serviceNameSuffix = data.serviceNameSuffix
+  
+  GroovyShell shell = new GroovyShell(new Binding(config))
+  shell.evaluate('"' + serviceNameSuffix +'"')  
   
   def environmentName = data.environmentName
   def db_name = data.db_name
@@ -19,7 +20,7 @@ def call(Map config = [:]) {
        
         stringParam(name: 'Test', defaultValue: JOB_NAME, description: 'Give the job name'),
           
-        stringParam(name: 'SuffixName', defaultValue: "${serviceNameSuffix}", description: 'Give the suffix name'),
+        stringParam(name: 'SuffixName', defaultValue: serviceNameSuffix, description: 'Give the suffix name'),
         
         stringParam(name: 'EnvironmentName', defaultValue: environmentName, description: 'Give the environment name'),
 
