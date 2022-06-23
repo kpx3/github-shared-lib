@@ -6,7 +6,7 @@ def call(Map config = [:]) {
   
   
   
-  def serviceNameSuffix = evaluate(${"data.serviceNameSuffix"})
+  def serviceNameSuffix = evaluate("${data.serviceNameSuffix}")
   def environmentName = data.environmentName
   def db_name = data.db_name
   def otmRelease = data.otmRelease
