@@ -6,7 +6,8 @@ def call(Map config = [:]) {
   last_started = env.STAGE_NAME
                 sh """
                 python ${data.PYTHON_FW_ENV}
-                  
-                echo '${data.EnvironmentName} ${data.OTM_RELEASE} ${data.OTM_RELEASE}'
+                def p1 = config.job+data.ServiceNameSuffix
+                
+                echo ' p1 ${data.EnvironmentName} ${data.OTM_RELEASE} ${data.ServiceNameSuffix}'
                 """ 
 }
