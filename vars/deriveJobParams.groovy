@@ -5,7 +5,7 @@ def call(Map config = [:]) {
   def JOB_NAME = config.job
 
   def serviceNameSuffix = "${data.serviceNameSuffix}"
-  serviceNameSuffix1 = Eval.me('JOB_NAME', JOB_NAME,'"' + serviceNameSuffix + '".toString()')
+  serviceNameSuffix = Eval.me('JOB_NAME', JOB_NAME,'"' + serviceNameSuffix + '".toString()')
   def environmentName = data.environmentName
   def db_name = data.db_name
   def otmRelease = data.otmRelease
@@ -17,7 +17,7 @@ def call(Map config = [:]) {
        
         stringParam(name: 'Test', defaultValue: JOB_NAME, description: 'Give the job name'),
           
-          stringParam(name: 'SuffixName', defaultValue: "${serviceNameSuffix1}", description: 'Give the suffix name'),
+          stringParam(name: 'SuffixName', defaultValue: "${serviceNameSuffix}", description: 'Give the suffix name'),
         
         stringParam(name: 'EnvironmentName', defaultValue: environmentName, description: 'Give the environment name'),
 
