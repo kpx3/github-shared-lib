@@ -9,5 +9,5 @@ def call() {
                 """
                 echo "Provisioning done"
                 echo "Sleep for sometime before QA testing"
-                sleep 300 
+                sleep 3 
                 }
