@@ -5,7 +5,7 @@ def call(Map config = [:]) {
   def JOB_NAME = config.job
 
   def serviceNameSuffix = "${data.serviceNameSuffix}"
-  serviceNameSuffix = Eval.me('"'serviceNameSuffix'".toString()')
+  serviceNameSuffix = Eval.me('JOB_NAME', JOB_NAME,'"' serviceNameSuffix '".toString()')
   def environmentName = data.environmentName
   def db_name = data.db_name
   def otmRelease = data.otmRelease
