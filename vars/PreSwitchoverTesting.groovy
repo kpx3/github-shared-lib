@@ -7,7 +7,7 @@ def call() {
                  def testGroup = [:]
                  testGroup['sanitlyLite'] = {
                  echo 'Build SanityLite Test'
-                 build(job: './QA/22A_DR_SanityLite')
+                 build(job: './pipelineOne')
                  parallel testGroup
                 }
 }
