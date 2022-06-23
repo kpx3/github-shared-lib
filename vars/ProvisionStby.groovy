@@ -6,7 +6,7 @@ def call() {
 last_started = env.STAGE_NAME
                 echo 'Create DR'
                 sh """
-                . ${data.PYTHON_FW_ENV}
+                python ${data.PYTHON_FW_ENV}
                
                 echo '${params.EnvironmentName}'
               
