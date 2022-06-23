@@ -6,9 +6,6 @@ def call(Map config = [:]) {
 
   def serviceNameSuffix = data.serviceNameSuffix
   
-  GroovyShell shell = new GroovyShell(new Binding(config))
-  shell.evaluate('"' + serviceNameSuffix +'"')  
-  
   def environmentName = data.environmentName
   def db_name = data.db_name
   def otmRelease = data.otmRelease
