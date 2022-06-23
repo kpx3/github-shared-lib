@@ -1,8 +1,8 @@
 { 
    "PYTHON_FW_ENV": "/Users/kautilyapandey/Documents/python_env.py",
    "serviceNameSuffix": "${JOB_NAME}-DR",
-   "EnvironmentName" : "py-22B-DR",
-   "def db_name" : "adc",
-   "def otmRelease" : "22b",
-   "OTM_RELEASE" : "22b"
+   "EnvironmentName" : "py-${JOB_NAME}-DR",
+   "def db_name" : "adc_${JOB_NAME}",
+   "def otmRelease" : "${JOB_NAME}",
+   "OTM_RELEASE" : "${JOB_NAME}"
 }
