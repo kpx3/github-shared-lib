@@ -1,7 +1,7 @@
 { 
    "PYTHON_FW_ENV": "/Users/kautilyapandey/Documents/Python_fw_env",
    "serviceNameSuffix": "22B-DR",
-   "EnvironmentName" : "pool2sm01p1z2dev.OTMGTM-22B-DR",
-   "def db_name" : "dphx2adc",
+   "EnvironmentName" : "py-22B-DR",
+   "def db_name" : "adc",
    "def otmRelease" : "22b"
 }
