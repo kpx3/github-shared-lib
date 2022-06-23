@@ -1,8 +1,8 @@
 import groovy.json.JsonSlurperClassic
-def call() { 
+def call(Map config = [:]) { 
   def props = libraryResource("foo/Parameters.json")
   def data = new JsonSlurperClassic().parseText(props)
-  sh "echo ${data}"
+  sh "echo ${data} ${config.job}"
   last_started = env.STAGE_NAME
                 sh """
                 python ${data.PYTHON_FW_ENV}
