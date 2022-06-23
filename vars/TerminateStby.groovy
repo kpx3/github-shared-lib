@@ -4,6 +4,7 @@ def call(Map config = [:]) {
   def data = new JsonSlurperClassic().parseText(props)
   sh "echo ${data} ${config.job}"
   def p1 = config.job+data.serviceNameSuffix
+  def JOB_NAME = config.job
   last_started = env.STAGE_NAME
                 sh """
                 python ${data.PYTHON_FW_ENV}              
