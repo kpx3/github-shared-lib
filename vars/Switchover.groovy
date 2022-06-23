@@ -8,7 +8,6 @@ def call() {
                 echo "Hello ${params.EnvironmentName}"
                 sh """
                 . ${PYTHON_FW_ENV}
-                cd \$OOW_HOME/main/otmociwf
-                python -u invoke_workflow.py --workflow=dr_switch_workflow --release=${params.OTM_RELEASE} --environment_name=${params.EnvironmentName} --patch_version=${params.OTM_VERSION}
+               
                 """
 }
