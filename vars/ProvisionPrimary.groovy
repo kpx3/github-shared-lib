@@ -5,7 +5,7 @@ def call() {
   last_started = env.STAGE_NAME
                 echo 'Provisioning '
                 sh """
-                . ${data.PYTHON_FW_ENV}
+                python ${data.PYTHON_FW_ENV}
                 """
                 echo "Provisioning done"
                 echo "Sleep for sometime before QA testing"
