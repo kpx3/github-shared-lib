@@ -3,12 +3,11 @@ def call(Map config = [:]) {
   def props = libraryResource("foo/Parameters.json")
   def data = new JsonSlurperClassic().parseText(props)
   def JOB_NAME = config.job
-
-  def serviceNameSuffix = "${data.serviceNameSuffix}"
-  serviceNameSuffix = Eval.me('JOB_NAME', JOB_NAME,'"' + "${data.serviceNameSuffix}" + '".toString()')
-  def environmentName = data.environmentName
-  def db_name = data.db_name
-  def otmRelease = data.otmRelease
+  
+  def serviceNameSuffix = Eval.me('JOB_NAME', JOB_NAME,'"' + "${data.serviceNameSuffix}" + '".toString()')
+  def environmentName = Eval.me('JOB_NAME', JOB_NAME,'"' + "${data.environmentName}" + '".toString()')
+  def db_name = Eval.me('JOB_NAME', JOB_NAME,'"' + "${data.db_name}" + '".toString()')
+  def otmRelease = Eval.me('JOB_NAME', JOB_NAME,'"' + "${data.otmRelease}" + '".toString()')
  
     properties([
         parameters([
