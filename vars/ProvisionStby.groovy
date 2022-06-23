@@ -8,7 +8,7 @@ last_started = env.STAGE_NAME
                 sh """
                 python ${data.PYTHON_FW_ENV}
                
-                echo '${params.EnvironmentName}'
+                echo '${data.EnvironmentName}'
               
                 """
 }
