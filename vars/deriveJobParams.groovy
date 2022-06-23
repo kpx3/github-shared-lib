@@ -4,8 +4,8 @@ def call(Map config = [:]) {
   def data = new JsonSlurperClassic().parseText(props)
   def JOB_NAME = config.job
 
-  def serviceNameSuffix = Eval.me('data.serviceNameSuffix')
-  
+  def serviceNameSuffix = data.serviceNameSuffix
+  serviceNameSuffix = Eval.me('serviceNameSuffix')
   def environmentName = data.environmentName
   def db_name = data.db_name
   def otmRelease = data.otmRelease
