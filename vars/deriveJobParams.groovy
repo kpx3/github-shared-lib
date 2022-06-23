@@ -4,7 +4,7 @@ def call(Map config = [:]) {
   def data = new JsonSlurperClassic().parseText(props)
   def JOB_NAME = config.job
 
-  def serviceNameSuffix = data.serviceNameSuffix
+  String serviceNameSuffix = data.serviceNameSuffix
   
   GroovyShell shell = new GroovyShell(new Binding(config))
   shell.evaluate('"' + serviceNameSuffix +'"')  
