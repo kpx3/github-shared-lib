@@ -2,9 +2,9 @@ import groovy.json.JsonSlurperClassic
 def call(Map config = [:]) { 
   def props = libraryResource("foo/Parameters.json")
   def data = new JsonSlurperClassic().parseText(props)
-  def JOB_NAME = config.job
+  def JOB_NAME = "22"
 
-  String serviceNameSuffix = data.serviceNameSuffix
+  def serviceNameSuffix = data.serviceNameSuffix
   
   GroovyShell shell = new GroovyShell(new Binding(config))
   shell.evaluate('"' + serviceNameSuffix +'"')  
