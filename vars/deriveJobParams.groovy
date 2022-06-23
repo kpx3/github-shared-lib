@@ -10,7 +10,7 @@ def call(Map config = [:]) {
        
         stringParam(name: 'Test', defaultValue: JOB_NAME, description: 'Give the job name'),
           
-          stringParam(name: 'SuffixName', defaultValue: sh """evaluate("${data.serviceNameSuffix}")""", description: 'Give the suffix name'),
+          stringParam(name: 'SuffixName', defaultValue: sh """ evaluate(${data.serviceNameSuffix}) """, description: 'Give the suffix name'),
         
         stringParam(name: 'EnvironmentName', defaultValue: data.environmentName, description: 'Give the environment name'),
 
