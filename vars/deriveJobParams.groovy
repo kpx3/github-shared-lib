@@ -6,7 +6,7 @@ def call(Map config = [:]) {
   
   
   
-  def serviceNameSuffix = data.serviceNameSuffix.replaceAll(/\$\{(\w+)\}/) { m, k -> map[k] }
+  def serviceNameSuffix = data.serviceNameSuffix.replaceAll(/\$\{(\w+)\}/) { m, k -> Map[k] }
   def environmentName = data.environmentName
   def db_name = data.db_name
   def otmRelease = data.otmRelease
