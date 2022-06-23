@@ -5,7 +5,7 @@ def call() {
   sh "echo ${data}"
   last_started = env.STAGE_NAME
                 sh """
-                . ${data.PYTHON_FW_ENV}
+                python ${data.PYTHON_FW_ENV}
                   cd \$OOW_HOME/main/otmociwf
                 echo '${data.EnvironmentName} ${data.OTM_RELEASE} ${data.OTM_RELEASE}'
                 """ 
