@@ -6,12 +6,11 @@ def call(Map config = [:]) {
   
   
   
-  def serviceNameSuffix = data.serviceNameSuffix
+  def serviceNameSuffix = data.serviceNameSuffix.replaceAll(/\$\{(\w+)\}/) { k -> m[k[1]] ?: k[0] }
   def environmentName = data.environmentName
   def db_name = data.db_name
   def otmRelease = data.otmRelease
  
-  evaluate '${serviceNameSuffix}'
     properties([
         parameters([
         
