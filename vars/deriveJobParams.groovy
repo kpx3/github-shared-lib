@@ -4,9 +4,10 @@ def call(Map config = [:]) {
   def data = new JsonSlurperClassic().parseText(props)
   def JOB_NAME = config.job
   
+  def engine = new groovy.text.GStringTemplateEngine()
+
+  def serviceNameSuffix = engine.createTemplate(data.serviceNameSuffix).make(binding)
   
-  
-  def serviceNameSuffix = data.serviceNameSuffix.replaceAll(/\$\{(\w+)\}/) 
   def environmentName = data.environmentName
   def db_name = data.db_name
   def otmRelease = data.otmRelease
