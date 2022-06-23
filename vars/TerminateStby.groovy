@@ -7,7 +7,6 @@ def call() {
                 sh """
                 . ${data.PYTHON_FW_ENV}
                   cd \$OOW_HOME/main/otmociwf
-                echo '${data.EnvironmentName}'
-                python invoke_workflow.py --workflow=terminate_dr_workflow --release=${data.OTM_RELEASE} --environment_name=${data.EnvironmentName}
+                echo '${data.EnvironmentName} ${data.OTM_RELEASE} ${data.OTM_RELEASE}'
                 """ 
 }
