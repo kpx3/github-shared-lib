@@ -2,11 +2,13 @@ import groovy.json.JsonSlurperClassic
 def call(Map config = [:]) { 
   def props = libraryResource("foo/Parameters.json")
   def data = new JsonSlurperClassic().parseText(props)
+  def JOB_NAME = config.job
+  
   def serviceNameSuffix = data.serviceNameSuffix
   def environmentName = data.environmentName
   def db_name = data.db_name
   def otmRelease = data.otmRelease
-  def JOB_NAME = config.job
+ 
     properties([
         parameters([
         
