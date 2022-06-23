@@ -11,7 +11,7 @@ def call(Map config = [:]) {
   def db_name = data.db_name
   def otmRelease = data.otmRelease
  
-  evaluate('${serviceNameSuffix}')
+  evaluate '${serviceNameSuffix}'
     properties([
         parameters([
         
