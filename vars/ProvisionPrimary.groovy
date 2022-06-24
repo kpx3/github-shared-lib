@@ -6,6 +6,7 @@ def call(Map config = [:]) {
   last_started = env.STAGE_NAME
                 echo 'Provisioning '
                 sh """
+                 JOB_NAME=${config.job}
                 python ${data.PYTHON_FW_ENV}
                 """
                 echo "Provisioning done"
