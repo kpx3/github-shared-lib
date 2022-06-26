@@ -8,7 +8,7 @@ def call(Map config = [:]) {
                  def testGroup = [:]
                  testGroup['sanitlyLite'] = {
                  echo 'Build SanityLite Test'
-                 build(job: './pipelineOne')
+                 build(job: '/pipelineOne')
                  }
                  parallel testGroup
 }
