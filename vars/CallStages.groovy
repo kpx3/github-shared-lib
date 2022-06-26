@@ -1,8 +1,12 @@
 def call (){
-  pipeline {
+ pipeline {
     agent any
-    stage("tts"){
-      TerminateStby(job:"22B")
-    }
-  }
+        stages {
+            stage('ProvisionPrimary'){
+                steps {
+                     ProvisionPrimary(job:"${JOB_NAME.minus("/" + JOB_BASE_NAME)}")
+                }
+            }
+        }
+ }
 }
