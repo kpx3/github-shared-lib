@@ -4,5 +4,9 @@ def call (Map config=[:]){
     case "ZDT" :
     ZDTStages();
     break;
+    
+    case "Migration" :
+    MigrationStages();
+    break;
   }
 }
