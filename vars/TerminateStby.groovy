@@ -7,7 +7,7 @@ def call(Map config = [:]) {
   sh " JOB=config.job echo $data $config.job $JOB_NAME"
   last_started = env.STAGE_NAME
                 sh """
-                JOB=config.job
+                $JOB=$config.job
                 python ${data.PYTHON_FW_ENV}      #running a python file       
                 JOB_NAME=${config.job}
                 echo  ${data.EnvironmentName} ${data.OTM_RELEASE} ${data.serviceNameSuffix}
