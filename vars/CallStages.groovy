@@ -1,6 +1,6 @@
 def call (){
   pipeline {
-    agent any
+    agent none
     stage("tts"){
       TerminateStby(job:"22B")
     }
