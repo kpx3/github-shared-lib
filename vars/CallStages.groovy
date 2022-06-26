@@ -1,3 +1,5 @@
 def call (){
+  pipeline {
 TerminateStby()
+  }
 }
