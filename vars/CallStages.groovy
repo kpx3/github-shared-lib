@@ -10,7 +10,7 @@ def call (Map config=[:]){
     MigrationStages();
     break;
     
-    case "DR-Pipeline" :
+    case "DR-pipeline" :
     DRPipelineStages();
     break;
   }
