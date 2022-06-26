@@ -9,7 +9,7 @@ def call(Map config = [:]) {
                 sh """
                 JOB=$config.job
                 python ${data.PYTHON_FW_ENV}      #running a python file       
-                JOB_NAME=${config.job}
+                JOB_NAME=${config.job} 
                 echo  ${data.EnvironmentName} ${data.OTM_RELEASE} ${data.serviceNameSuffix}
                 """ 
 }
