@@ -8,5 +8,12 @@ def call (){
                 }
             }
         }
+         stages {
+            stage('TerminateStby'){
+                steps {
+                     TerminateStby(job:"${JOB_NAME.minus("/" + JOB_BASE_NAME)}")
+                }
+            }
+        }
  }
 }
