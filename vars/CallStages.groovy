@@ -1,5 +1,5 @@
 def call (){
   pipeline {
-TerminateStby()
+TerminateStby("22B")
   }
 }
