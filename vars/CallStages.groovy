@@ -1,6 +1,6 @@
 def call (Map config=[:]){
  def stage = config.stage
- case(stage)
+ switch(stage){
  case "ZDT":
  
  pipeline {
@@ -37,4 +37,5 @@ def call (Map config=[:]){
         }
  }
  break;
+ }
 }
