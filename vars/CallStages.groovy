@@ -14,5 +14,9 @@ def call (Map config=[:]){
     case "DR-pipeline" :
     DRPipelineStages();
     break;
+    
+    case "Patching" :
+    PatchingStage();
+    break;
   }
 }
