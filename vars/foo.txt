@@ -1,1 +1,3 @@
-
+For each function create a groovy file naming the main function as 'call()'. 
+Each of these can thus be used to realise a given logic common across the library.
+There are stages call stages and select stages function for the pipeline currently.
