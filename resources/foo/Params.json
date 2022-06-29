@@ -1,0 +1,32 @@
+{
+  "22C": {
+    "DR": {
+      "databaseName":"abcDR22C",
+      "VM_SIZE": "MEDIUM",
+      "serviceNameSuffix": "22C-DR",
+       "environmentName" : "py-22C-DR"
+    },
+    "ZDT": {
+      "databaseName":"abcZDT22C",
+      "VM_SIZE": "LARGE",
+      "ZDT_MIGRATION": "TRUE",
+      "serviceNameSuffix": "22C-DR",
+      "environmentName" : "py-23A-DR"
+    }
+  },
+  "23A": {
+   "DR":{
+     "databaseName":"abcZDT23A",
+     "VM_SIZE": "MEDIUM",
+     "serviceNameSuffix": "23A-DR",
+     "environmentName" : "py-23A-DR"
+   },
+   "ZDT":{
+     "databaseName":"abcZDT23A",
+     "VM_SIZE": "MEDIUM",
+     "ZDT_MIGRATION": "TRUE",
+     "serviceNameSuffix": "23A-DR",
+     "environmentName" : "py-23A-DR",
+   }
+  }
+}
