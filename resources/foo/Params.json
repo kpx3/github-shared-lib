@@ -1,7 +1,7 @@
 {
   "22C": {
     "DR": {
-      "databaseName":"abcDR22C",
+      "databaseName":"abcDR${JOB_NAME}",
       "VM_SIZE": "MEDIUM",
       "serviceNameSuffix": "22C-DR",
        "environmentName" : "py-22C-DR"
@@ -10,9 +10,15 @@
       "databaseName":"abcZDT22C",
       "VM_SIZE": "LARGE",
       "ZDT_MIGRATION": "TRUE",
+      "serviceNameSuffix": "${JOB_NAME}-DR",
+      "environmentName" : "py-${JOB_NAME}-DR"
+    },
+    "Migration": {
+      "databaseName":"abcDR22C",
+      "VM_SIZE": "MEDIUM",
       "serviceNameSuffix": "22C-DR",
-      "environmentName" : "py-23A-DR"
-    }
+       "environmentName" : "py-22C-DR"
+    },
   },
   "23A": {
    "DR":{
